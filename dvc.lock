@@ -35,3 +35,19 @@ stages:
       hash: md5
       md5: b7fc857de256318e0eb7846048792dbf
       size: 206266201
+  evaluation:
+    cmd: python src/models/evaluate_model.py
+    deps:
+    - path: models/trained_model.joblib
+      hash: md5
+      md5: b7fc857de256318e0eb7846048792dbf
+      size: 206266201
+    - path: src/models/evaluate_model.py
+      hash: md5
+      md5: 65d1f5754404f287ba753d7a6e2d59af
+      size: 831
+    outs:
+    - path: metrics/accuracy.json
+      hash: md5
+      md5: 9ee3a831d9155f1d2e413bbcd445ddee
+      size: 32
